@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Yn1JrTPjvDrVQ/LFvFcmvWM+iK2uJ/iYc1/eM7IWGJ/PCy7jSbToQFI5zZI4nwQCsMbIQ5DZ5ZQlkT397lXIhA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\CFUser\\OneDrive - Kroll\\GitHub\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\CFUser\\.nuget\\packages\\csvhelper\\27.2.1\\csvhelper.27.2.1.nupkg.sha512"
+  ],
+  "logs": []
+}
