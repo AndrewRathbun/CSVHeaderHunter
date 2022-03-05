@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Yn1JrTPjvDrVQ/LFvFcmvWM+iK2uJ/iYc1/eM7IWGJ/PCy7jSbToQFI5zZI4nwQCsMbIQ5DZ5ZQlkT397lXIhA==",
+  "dgSpecHash": "qx1iQ/Wu7XnWTa1OAfbAv4ryniGo7ccRnePcTs2N+3SAnp4EStbosgnjydcDmgTKNg9Og4aS9nev6/CnncVIkQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\CFUser\\OneDrive - Kroll\\GitHub\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\CFUser\\.nuget\\packages\\csvhelper\\27.2.1\\csvhelper.27.2.1.nupkg.sha512"
+    "C:\\Users\\CFUser\\.nuget\\packages\\csvhelper\\27.2.1\\csvhelper.27.2.1.nupkg.sha512",
+    "C:\\Users\\CFUser\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\CFUser\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\CFUser\\.nuget\\packages\\serilog\\2.11.0-dev-01380\\serilog.2.11.0-dev-01380.nupkg.sha512"
   ],
   "logs": []
 }
