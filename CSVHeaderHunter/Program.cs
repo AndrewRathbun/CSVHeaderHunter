@@ -1,61 +1,50 @@
-﻿using System;
-
-namespace CSVHeaderHunter // Note: actual namespace depends on the project name.
+﻿class Program
 {
-    internal class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        //.CSV: comma seperated values
+        AppendToCSV();
+        ReadCSVFile();
+        Console.ReadLine();
+    }
+    static void AppendToCSV()
+    {
+        var list = Contacts.GetContacts();
+        foreach (var c in list)
         {
-            // https://www.c-sharpcorner.com/UploadFile/mahesh/how-to-get-a-file-extension-in-C-Sharp/#:~:text=C%23%20Get%20File%20Extension.%20The%20Extension%20property%20of,extn%20%3D%20fi.Extension%3B%20Console.WriteLine%20%28%22File%20Extension%3A%20%7B0%7D%22%2C%20extn%29%3B
-            // https://docs.microsoft.com/en-us/dotnet/api/system.io.directory.getfiles?view=net-6.0
-            // https://docs.microsoft.com/en-us/dotnet/api/system.io.directory.enumeratefiles?view=net-6.0
-
-            using System ;
-            using System.IO ;
-            using System.Linq ;
-
-            class Program
-            {
-                static void Main(string[] args)
-                {
-                    try
-
-                    // The following example recursively enumerates all files that have a .txt extension, reads each line of the file, and displays the line if it contains the string "Microsoft".
-
-
-                    // Set a variable to the My Documents path.
-                    string docPath =
-                        Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-
-                    var files = from file in Directory.EnumerateFiles(docPath, "*.txt", SearchOption.AllDirectories)
-                        from line in File.ReadLines(file)
-                        where line.Contains("Microsoft")
-                        select new
-                        {
-                            File = file,
-                            Line = line
-                        };
-
-                    foreach (var f in files)
-                    {
-                        Console.WriteLine($"{f.File}\t{f.Line}");
-                    }
-
-                    Console.WriteLine($"{files.Count().ToString()} files found.");
-                }
-                catch
-
-                (UnauthorizedAccessException uAEx)
-                {
-                    Console.WriteLine(uAEx.Message);
-                }
-                catch (PathTooLongException pathEx)
-                {
-                    Console.WriteLine(pathEx.Message);
-                }
-            }
+            File.AppendAllText("contacts.csv", $"{c.Name},{c.Phone}\n");
         }
     }
+    static void ReadCSVFile()
+    {
+        var lines = File.ReadAllLines("C:\\Users\\CFUser\\OneDrive - Kroll\\CyberVM\\EDrive\\Training\\Directory Opus Demo\\Flat View Filtering Demo - Canon KAPE Output, also ctrl f demo\\KapeTriage_L-114213\\EventLogs\\20200919142304_EvtxECmd_Output.csv");
+        var list = new List<Contact>();
+        foreach (var line in lines)
+        {
+            var values = line.Split(',');
+            if (values.Length==2)
+            {
+                var contact = new Contact() { Name = values[0], Phone = values[1] };
+                list.Add(contact); 
+            }
+        }
+        list.ForEach(x => Console.WriteLine($"{x.Name}\t{x.Phone}"));
+    }
+} 
+public class Contacts
+{
+    public static List<CsvHeaders> GetContacts()
+    {
+        return new List<CsvHeaders>()
+        {
+            new CsvHeaders(){Name="Jill", Phone="333-444-5555"},
+            new CsvHeaders(){Name="Jane", Phone="669-444-7777"},
+            new CsvHeaders(){Name="Hill", Phone="222-444-8888"},
+        };
+    }
 }
-
+public class CsvHeaders
+{
+    public string FileName { get; set; }
+    public string Headers { get; set; }
 }

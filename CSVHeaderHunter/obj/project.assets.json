@@ -43,6 +43,68 @@
         "runtime": {
           "lib/net5.0/Serilog.dll": {}
         }
+      },
+      "System.CommandLine/2.0.0-beta3.22114.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.CommandLine.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/System.CommandLine.dll": {}
+        },
+        "resource": {
+          "lib/net6.0/cs/System.CommandLine.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net6.0/de/System.CommandLine.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0/es/System.CommandLine.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net6.0/fr/System.CommandLine.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net6.0/it/System.CommandLine.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net6.0/ja/System.CommandLine.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net6.0/ko/System.CommandLine.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net6.0/pl/System.CommandLine.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net6.0/pt-BR/System.CommandLine.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net6.0/ru/System.CommandLine.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net6.0/tr/System.CommandLine.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net6.0/zh-Hans/System.CommandLine.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net6.0/zh-Hant/System.CommandLine.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "System.CommandLine.NamingConventionBinder/2.0.0-beta3.22111.2": {
+        "type": "package",
+        "dependencies": {
+          "System.CommandLine": "2.0.0-beta3.22111.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.CommandLine.NamingConventionBinder.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.CommandLine.NamingConventionBinder.dll": {}
+        }
       }
     }
   },
@@ -240,13 +302,74 @@
         "serilog.2.11.0-dev-01380.nupkg.sha512",
         "serilog.nuspec"
       ]
+    },
+    "System.CommandLine/2.0.0-beta3.22114.1": {
+      "sha512": "QMzk1jj+PzdGbwuVsxII7FcQaCelnK+TcRcAqOGVoPovLBCSQPdikKiEzb56vAidvum5t4LSdDZ34O4j7+ALgw==",
+      "type": "package",
+      "path": "system.commandline/2.0.0-beta3.22114.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net6.0/System.CommandLine.dll",
+        "lib/net6.0/System.CommandLine.pdb",
+        "lib/net6.0/System.CommandLine.xml",
+        "lib/net6.0/cs/System.CommandLine.resources.dll",
+        "lib/net6.0/de/System.CommandLine.resources.dll",
+        "lib/net6.0/es/System.CommandLine.resources.dll",
+        "lib/net6.0/fr/System.CommandLine.resources.dll",
+        "lib/net6.0/it/System.CommandLine.resources.dll",
+        "lib/net6.0/ja/System.CommandLine.resources.dll",
+        "lib/net6.0/ko/System.CommandLine.resources.dll",
+        "lib/net6.0/pl/System.CommandLine.resources.dll",
+        "lib/net6.0/pt-BR/System.CommandLine.resources.dll",
+        "lib/net6.0/ru/System.CommandLine.resources.dll",
+        "lib/net6.0/tr/System.CommandLine.resources.dll",
+        "lib/net6.0/zh-Hans/System.CommandLine.resources.dll",
+        "lib/net6.0/zh-Hant/System.CommandLine.resources.dll",
+        "lib/netstandard2.0/System.CommandLine.dll",
+        "lib/netstandard2.0/System.CommandLine.pdb",
+        "lib/netstandard2.0/System.CommandLine.xml",
+        "lib/netstandard2.0/cs/System.CommandLine.resources.dll",
+        "lib/netstandard2.0/de/System.CommandLine.resources.dll",
+        "lib/netstandard2.0/es/System.CommandLine.resources.dll",
+        "lib/netstandard2.0/fr/System.CommandLine.resources.dll",
+        "lib/netstandard2.0/it/System.CommandLine.resources.dll",
+        "lib/netstandard2.0/ja/System.CommandLine.resources.dll",
+        "lib/netstandard2.0/ko/System.CommandLine.resources.dll",
+        "lib/netstandard2.0/pl/System.CommandLine.resources.dll",
+        "lib/netstandard2.0/pt-BR/System.CommandLine.resources.dll",
+        "lib/netstandard2.0/ru/System.CommandLine.resources.dll",
+        "lib/netstandard2.0/tr/System.CommandLine.resources.dll",
+        "lib/netstandard2.0/zh-Hans/System.CommandLine.resources.dll",
+        "lib/netstandard2.0/zh-Hant/System.CommandLine.resources.dll",
+        "system.commandline.2.0.0-beta3.22114.1.nupkg.sha512",
+        "system.commandline.nuspec"
+      ]
+    },
+    "System.CommandLine.NamingConventionBinder/2.0.0-beta3.22111.2": {
+      "sha512": "2MRZVcbXvX2cmYcVYfRQ+F+1zG/3inWHmDJYWo08IR88jUXmqACFHbsFcln58UEj9vWPH1AWyZlHdWDRN0af3w==",
+      "type": "package",
+      "path": "system.commandline.namingconventionbinder/2.0.0-beta3.22111.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netstandard2.0/System.CommandLine.NamingConventionBinder.dll",
+        "lib/netstandard2.0/System.CommandLine.NamingConventionBinder.pdb",
+        "lib/netstandard2.0/System.CommandLine.NamingConventionBinder.xml",
+        "system.commandline.namingconventionbinder.2.0.0-beta3.22111.2.nupkg.sha512",
+        "system.commandline.namingconventionbinder.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "CsvHelper >= 27.2.1",
       "NETStandard.Library >= 2.0.3",
-      "Serilog >= 2.11.0-dev-01380"
+      "Serilog >= 2.11.0-dev-01380",
+      "System.CommandLine >= 2.0.0-beta3.22114.1",
+      "System.CommandLine.NamingConventionBinder >= 2.0.0-beta3.22111.2"
     ]
   },
   "packageFolders": {
@@ -300,6 +423,14 @@
           "Serilog": {
             "target": "Package",
             "version": "[2.11.0-dev-01380, )"
+          },
+          "System.CommandLine": {
+            "target": "Package",
+            "version": "[2.0.0-beta3.22114.1, )"
+          },
+          "System.CommandLine.NamingConventionBinder": {
+            "target": "Package",
+            "version": "[2.0.0-beta3.22111.2, )"
           }
         },
         "imports": [
