@@ -7,6 +7,8 @@
         ReadCSVFile();
         Console.ReadLine();
     }
+    
+    // https://crudzone.wordpress.com/wpf/
     static void AppendToCSV()
     {
         var list = Contacts.GetContacts();
