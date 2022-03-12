@@ -1,4 +1,5 @@
 ﻿using System.CommandLine;
+using System.CommandLine.Help;
 using System.CommandLine.NamingConventionBinder;
 using System.Globalization;
 using System.Reflection;
@@ -32,7 +33,7 @@ internal class Program
             new Option<string>(
                 "-d",
                 "Directory to process recursively that contains CSV files."),
-            /*new Option<string>(
+            new Option<string>(
                 "--csv",
                 "Directory to save CSV formatted results to"),
             new Option<bool>(
@@ -42,7 +43,7 @@ internal class Program
             new Option<bool>(
                 "--trace",
                 () => false,
-                "Show trace information during processing")*/
+                "Show trace information during processing")
         };
 
         _rootCommand.Description = Header + "\r\n\r\n" + Footer;
@@ -50,8 +51,6 @@ internal class Program
         _rootCommand.Handler = CommandHandler.Create(DoWork);
 
         await _rootCommand.InvokeAsync(args);
-
-        Log.CloseAndFlush();
     }
 
 
@@ -96,7 +95,7 @@ internal class Program
     }
     */
 
-    private static void DoWork(string f, string d, string csv, bool debug, bool trace)
+    private static void DoWork(string d, string csv, bool debug, bool trace)
     {
         /*
         var levelSwitch = new LoggingLevelSwitch();
@@ -178,7 +177,32 @@ internal class Program
                 }
             }
         }
+        if (string.IsNullOrEmpty(d))
+        {
+            var helpBld = new HelpBuilder(LocalizationResources.Instance, Console.WindowWidth);
+            var hc = new HelpContext(helpBld, _rootCommand, Console.Out);
+
+            helpBld.Write(hc);
+
+            Log.Warning("-f or -d is required. Exiting");
+            Console.WriteLine();
+            return;
+        }
+
+        if (string.IsNullOrEmpty(csv))
+        {
+            var helpBld = new HelpBuilder(LocalizationResources.Instance, Console.WindowWidth);
+            var hc = new HelpContext(helpBld, _rootCommand, Console.Out);
+
+            helpBld.Write(hc);
+
+            Log.Warning("--csv is required. Exiting");
+            Console.WriteLine();
+            return;
+        }
+
     }
+/*
     private class DateTimeOffsetFormatter : IFormatProvider, ICustomFormatter
     {
         private readonly IFormatProvider _innerFormatProvider;
@@ -198,6 +222,7 @@ internal class Program
             throw new NotImplementedException();
         }
     }
+*/
 
     private static void ProcessFile(string getFullPath, string csv)
     {
