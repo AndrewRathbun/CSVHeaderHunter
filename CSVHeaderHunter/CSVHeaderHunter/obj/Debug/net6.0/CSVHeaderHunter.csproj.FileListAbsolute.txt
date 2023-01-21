@@ -1,0 +1,15 @@
+E:\OneDrive - Kroll\GitHub\CSharpAdventures\CSVHeaderHunter\CSVHeaderHunter\CSVHeaderHunter\bin\Debug\net6.0\CSVHeaderHunter.exe
+E:\OneDrive - Kroll\GitHub\CSharpAdventures\CSVHeaderHunter\CSVHeaderHunter\CSVHeaderHunter\bin\Debug\net6.0\CSVHeaderHunter.deps.json
+E:\OneDrive - Kroll\GitHub\CSharpAdventures\CSVHeaderHunter\CSVHeaderHunter\CSVHeaderHunter\bin\Debug\net6.0\CSVHeaderHunter.runtimeconfig.json
+E:\OneDrive - Kroll\GitHub\CSharpAdventures\CSVHeaderHunter\CSVHeaderHunter\CSVHeaderHunter\bin\Debug\net6.0\CSVHeaderHunter.dll
+E:\OneDrive - Kroll\GitHub\CSharpAdventures\CSVHeaderHunter\CSVHeaderHunter\CSVHeaderHunter\bin\Debug\net6.0\CSVHeaderHunter.pdb
+E:\OneDrive - Kroll\GitHub\CSharpAdventures\CSVHeaderHunter\CSVHeaderHunter\CSVHeaderHunter\obj\Debug\net6.0\CSVHeaderHunter.csproj.AssemblyReference.cache
+E:\OneDrive - Kroll\GitHub\CSharpAdventures\CSVHeaderHunter\CSVHeaderHunter\CSVHeaderHunter\obj\Debug\net6.0\CSVHeaderHunter.GeneratedMSBuildEditorConfig.editorconfig
+E:\OneDrive - Kroll\GitHub\CSharpAdventures\CSVHeaderHunter\CSVHeaderHunter\CSVHeaderHunter\obj\Debug\net6.0\CSVHeaderHunter.AssemblyInfoInputs.cache
+E:\OneDrive - Kroll\GitHub\CSharpAdventures\CSVHeaderHunter\CSVHeaderHunter\CSVHeaderHunter\obj\Debug\net6.0\CSVHeaderHunter.AssemblyInfo.cs
+E:\OneDrive - Kroll\GitHub\CSharpAdventures\CSVHeaderHunter\CSVHeaderHunter\CSVHeaderHunter\obj\Debug\net6.0\CSVHeaderHunter.csproj.CoreCompileInputs.cache
+E:\OneDrive - Kroll\GitHub\CSharpAdventures\CSVHeaderHunter\CSVHeaderHunter\CSVHeaderHunter\obj\Debug\net6.0\CSVHeaderHunter.dll
+E:\OneDrive - Kroll\GitHub\CSharpAdventures\CSVHeaderHunter\CSVHeaderHunter\CSVHeaderHunter\obj\Debug\net6.0\refint\CSVHeaderHunter.dll
+E:\OneDrive - Kroll\GitHub\CSharpAdventures\CSVHeaderHunter\CSVHeaderHunter\CSVHeaderHunter\obj\Debug\net6.0\CSVHeaderHunter.pdb
+E:\OneDrive - Kroll\GitHub\CSharpAdventures\CSVHeaderHunter\CSVHeaderHunter\CSVHeaderHunter\obj\Debug\net6.0\CSVHeaderHunter.genruntimeconfig.cache
+E:\OneDrive - Kroll\GitHub\CSharpAdventures\CSVHeaderHunter\CSVHeaderHunter\CSVHeaderHunter\obj\Debug\net6.0\ref\CSVHeaderHunter.dll
