@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\OneDrive - Kroll\\GitHub\\CSharpAdventures\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter.csproj",
+      "projectUniqueName": "D:\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter.csproj",
       "projectName": "CSVHeaderHunter",
-      "projectPath": "E:\\OneDrive - Kroll\\GitHub\\CSharpAdventures\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter.csproj",
+      "projectPath": "D:\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter.csproj",
       "packagesPath": "C:\\Users\\CFUser\\.nuget\\packages\\",
-      "outputPath": "E:\\OneDrive - Kroll\\GitHub\\CSharpAdventures\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter\\obj\\",
+      "outputPath": "D:\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\CFUser\\AppData\\Roaming\\NuGet\\NuGet.Config"
