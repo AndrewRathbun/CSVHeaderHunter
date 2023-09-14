@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter.csproj": {}
+    "D:\\AndrewRathbun\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter.csproj": {}
   },
   "projects": {
-    "D:\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter.csproj": {
+    "D:\\AndrewRathbun\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter.csproj",
+        "projectUniqueName": "D:\\AndrewRathbun\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter.csproj",
         "projectName": "CSVHeaderHunter",
-        "projectPath": "D:\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter.csproj",
+        "projectPath": "D:\\AndrewRathbun\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter.csproj",
         "packagesPath": "C:\\Users\\CFUser\\.nuget\\packages\\",
-        "outputPath": "D:\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter\\obj\\",
+        "outputPath": "D:\\AndrewRathbun\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter\\CSVHeaderHunter\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\CFUser\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\CFUser\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -37,6 +39,20 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Costura.Fody": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.7.0, )"
+            },
+            "Fody": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.8.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -53,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\CFUser\\.dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

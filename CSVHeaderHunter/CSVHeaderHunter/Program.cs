@@ -1,57 +1,105 @@
 ﻿using System;
 using System.IO;
+using System.Threading.Tasks;
 
 class Program
 {
-    static void Main(string[] args)
+    static async Task Main(string[] args)
     {
         string folderPath;
         string outputPath;
 
-        // Check if the user has specified a folder path as a command-line argument
-        if (args.Length > 0)
+        // Improved argument parsing
+        ParseArguments(args, out folderPath, out outputPath);
+
+        // Validate folder path
+        if (!Directory.Exists(folderPath))
         {
-            folderPath = args[0];
-        }
-        else
-        {
-            // Prompt the user to enter the folder path
-            Console.WriteLine("Enter the path of the folder:");
-            folderPath = Console.ReadLine();
+            Console.WriteLine("Invalid folder path. Exiting.");
+            return;
         }
 
-        // Check if the user has specified an output path as a command-line argument
-        if (args.Length > 1)
+        try
         {
-            outputPath = args[1];
+            // Get CSV files and write the output
+            await ProcessCsvFiles(folderPath, outputPath);
         }
-        else
+        catch (Exception ex)
         {
-            // Use the input folder as the default output path
-            outputPath = folderPath;
+            Console.WriteLine($"An error occurred: {ex.Message}");
         }
+    }
 
-        // Get all CSV files in the folder and its subfolders
+    private static void ParseArguments(string[] args, out string folderPath, out string outputPath)
+    {
+        // Prompt the user to enter the folder path if not specified
+        folderPath = args.Length > 0 ? args[0] : GetUserInput("Enter the path of the folder:");
+        outputPath = args.Length > 1 ? args[1] : folderPath;
+    }
+
+    private static string GetUserInput(string prompt)
+    {
+        Console.WriteLine(prompt);
+        return Console.ReadLine();
+    }
+
+    private static async Task ProcessCsvFiles(string folderPath, string outputPath)
+    {
+        // Asynchronously get CSV files
         var csvFiles = Directory.GetFiles(folderPath, "*.csv", SearchOption.AllDirectories);
 
-        // Create a new text file to write the first lines of the CSV files
-        string outputFile = Path.Combine(outputPath, "output.txt");
-        using (StreamWriter writer = new StreamWriter(outputFile))
+        // Change the output extension to .csv
+        string outputFile = Path.Combine(outputPath, "output.csv");
+
+        try
         {
-            // Write the first line of each CSV file to the text file
-            foreach (string csvFile in csvFiles)
+            // Asynchronously write output
+            using (StreamWriter writer = new StreamWriter(outputFile))
             {
-                using (StreamReader reader = new StreamReader(csvFile))
+                // Write the header for the CSV file
+                await writer.WriteLineAsync("CSV File,First Line");
+
+                foreach (string csvFile in csvFiles)
                 {
-                    // Read the first line of each csvFile
-                    string firstLine = reader.ReadLine();
-                    // Output the filename (csvFile) and first row (firstLine) of each CSV that resides in the folder provider by the user 
-                    writer.WriteLine("{0} | {1}", csvFile, firstLine);
+                    // Gather and print file information
+                    FileInfo fileInfo = new FileInfo(csvFile);
+                    long fileSizeInBytes = fileInfo.Length; // File size in bytes
+                    double fileSizeInMegabytes = fileSizeInBytes / Math.Pow(1024, 2); // File size in megabytes
+                    DateTime creationTime = fileInfo.CreationTime; // File creation time
+
+                    Console.WriteLine($"Ingesting file: {csvFile}");
+                    Console.WriteLine($"File Size: {fileSizeInBytes} Bytes | {fileSizeInMegabytes:F2} MB");
+                    Console.WriteLine($"Created On: {creationTime}");
+
+                    using (StreamReader reader = new StreamReader(csvFile))
+                    {
+                        string firstLine = await reader.ReadLineAsync();
+
+                        // Quote the csvFile and firstLine variables in case they contain commas or quotes
+                        string sanitizedCsvFile = SanitizeCsvField(csvFile);
+                        string sanitizedFirstLine = SanitizeCsvField(firstLine);
+
+                        // Write the output in CSV format
+                        await writer.WriteLineAsync($"{sanitizedCsvFile},{sanitizedFirstLine}");
+                    }
                 }
             }
-        }
 
-        Console.WriteLine("Done! Check the output file at: " + outputFile);
-        Console.ReadKey();
+            Console.WriteLine($"Done! Check the output CSV file at: {outputFile}");
+        }
+        catch (IOException ioEx)
+        {
+            Console.WriteLine($"An IOException occurred: {ioEx.Message}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred: {ex.Message}");
+        }
+    }
+
+    // Method to sanitize each field for CSV
+    private static string SanitizeCsvField(string field)
+    {
+        return $"\"{field.Replace("\"", "\"\"")}\"";
     }
 }
